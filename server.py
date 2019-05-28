@@ -170,7 +170,7 @@ def fetch_list(username, password, session_key, captcha=None):
     now_month = now.strftime('%m')
     to_be_returned_list = []
 
-    while curr_year < now_year:
+    while curr_year <= now_year:
         
         kksj = curr_year + '-' + curr_year[:-1] + str(int(curr_year[-1]) + 1) + '-' + '1'
 
@@ -180,6 +180,7 @@ def fetch_list(username, password, session_key, captcha=None):
             'kcmc': '',
             'xsfs': 'all'
         }
+        out = False
         for i in range(2):
             #
             try:
@@ -215,8 +216,12 @@ def fetch_list(username, password, session_key, captcha=None):
             to_be_returned_list.append(term_dict)
             kksj = kksj[:-1] + '2'
             search_list_postdata['kksj'] = kksj
-            if(int(now_year) - int(curr_year) == 1) and int(now_month) < 6:
+            if (int(now_year) - int(curr_year) == 1) and int(now_month) < 5:
                 break
+            if now_year == curr_year and int(now_month) < 12:
+                out = True
+        if out:
+            break
         curr_year = str(int(curr_year) + 1)
         # 
     return to_be_returned_list
