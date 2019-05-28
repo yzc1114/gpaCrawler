@@ -217,6 +217,7 @@ def fetch_list(username, password, session_key, captcha=None):
             kksj = kksj[:-1] + '2'
             search_list_postdata['kksj'] = kksj
             if (int(now_year) - int(curr_year) == 1) and int(now_month) < 5:
+                out = True
                 break
             if now_year == curr_year and int(now_month) < 12:
                 out = True
