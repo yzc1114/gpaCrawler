@@ -183,6 +183,8 @@ def fetch_list(username, password, session_key, captcha=None):
         out = False
         for i in range(2):
             #
+            if now_year == curr_year and int(now_month) < 12:
+                out = True
             try:
                 try_get_list_response = global_sessions[session_key]['session'].post(search_list_url,
                                                                           data=search_list_postdata,
@@ -219,8 +221,6 @@ def fetch_list(username, password, session_key, captcha=None):
             if (int(now_year) - int(curr_year) == 1) and int(now_month) < 5:
                 out = True
                 break
-            if now_year == curr_year and int(now_month) < 12:
-                out = True
         if out:
             break
         curr_year = str(int(curr_year) + 1)
