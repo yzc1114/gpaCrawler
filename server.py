@@ -185,6 +185,7 @@ def fetch_list(username, password, session_key, captcha=None):
             #
             if now_year == curr_year and int(now_month) < 12:
                 out = True
+                break
             try:
                 try_get_list_response = global_sessions[session_key]['session'].post(search_list_url,
                                                                           data=search_list_postdata,
@@ -258,7 +259,9 @@ def login(username, password, session_key):
     if str(login_response.status_code)[0] != "2":
         return "sites_dead"
     login_page_soup = BeautifulSoup(login_response.content.decode('utf-8'))
-    new_login_url = host + login_page_soup.form['action']
+    jsessionid = login_page_soup.form['action'].split("jsessionid=")[-1].split("?service")[0]
+    service = login_page_soup.form['action'].split("service=")[-1]
+    new_login_url = host + "/authserver/login?" + "jsessionid=" + jsessionid + "&service=" + service
 
     
     all_input = login_page_soup.find_all('input')
