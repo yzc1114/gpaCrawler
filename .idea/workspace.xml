@@ -11,15 +11,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/gpaCrawler$gpaCrawler.coverage" NAME="gpaCrawler Coverage Results" MODIFIED="1562070598328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/gpaCrawler$gpaCrawler.coverage" NAME="gpaCrawler Coverage Results" MODIFIED="1562072002613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="372" column="31" lean-forward="true" selection-start-line="372" selection-start-column="31" selection-end-line="372" selection-end-column="31" />
+            <state relative-caret-position="220">
+              <caret line="378" column="56" selection-start-line="378" selection-start-column="56" selection-end-line="378" selection-end-column="56" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -113,16 +113,15 @@
       <workItem from="1559024758427" duration="14000" />
       <workItem from="1559024894605" duration="13000" />
       <workItem from="1559289068947" duration="2213000" />
-      <workItem from="1562070309223" duration="526000" />
+      <workItem from="1562070309223" duration="1253000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3499000" />
+    <option name="totallyTimeSpent" value="4226000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="824" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -204,8 +203,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="372" column="31" lean-forward="true" selection-start-line="372" selection-start-column="31" selection-end-line="372" selection-end-column="31" />
+        <state relative-caret-position="220">
+          <caret line="378" column="56" selection-start-line="378" selection-start-column="56" selection-end-line="378" selection-end-column="56" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>

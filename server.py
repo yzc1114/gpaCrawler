@@ -375,5 +375,14 @@ def get_announcement():
     return default_announcement
 
 
+@app.route('/setAnnouncement', methods=['GET'])
+def get_setting_a_page():
+    return '''
+    <form action='/setAnnouncement' method="post" style="width: 500px;">
+        <input type="text" name="content" value="{}"></input>
+        <input type="submit" value="提交"/>
+    </form>
+    '''.format(default_announcement)
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
