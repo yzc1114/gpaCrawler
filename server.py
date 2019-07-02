@@ -8,7 +8,7 @@ import datetime
 
 
 app = Flask(__name__)
-app.debug = True
+app.debug = False
 
 global_sessions = {}
 
@@ -87,8 +87,10 @@ def sign_in_fetch_list():
     password = request.form['password']
     session_key = request.form['session_key']
     fetched_list = fetch_list(username, password, session_key)
+    # global_sessions[session_key] = None
     if fetched_list:
         # print(fetched_list)
+        global_sessions[session_key] = None
         json_data = json.dumps(fetched_list)
         return json_data
     else:
@@ -106,8 +108,10 @@ def sign_in_fetch_list_with_captcha():
         return "no session key found"
     else:
         fetched_list = fetch_list(username, password, session_key, captcha=captchaResponse)
+        #global_sessions[session_key] = None
         if fetched_list:
-            print(fetched_list)
+            #print(fetched_list)
+            global_sessions[session_key] = None
             json_data = json.dumps(fetched_list)
             return json_data
         else:
@@ -189,7 +193,7 @@ def fetch_list(username, password, session_key, captcha=None):
             try:
                 try_get_list_response = global_sessions[session_key]['session'].post(search_list_url,
                                                                           data=search_list_postdata,
-                                                                          headers=headers)
+                                                                          headers=headers, timeout=10)
             except:
                 break
             if str(try_get_list_response.status_code)[0] != '2':
@@ -233,6 +237,7 @@ def login(username, password, session_key):
     global global_sessions
     host = 'http://202.114.234.143'
     login_url = 'http://202.114.234.143/authserver/login?service=http%3A%2F%2F202.114.234.160%2Fjsxsd%2Fkscj%2Fcjcx_query%3FVes632DSdyV%3DNEW_XSD_XJCJ'
+    #login_url = 'http://202.114.234.143/authserver/login'
     to_get_captcha_url = 'http://202.114.234.143/authserver/captcha.html'
     #
     get_url = 'http://202.114.234.160/jsxsd/kscj/cjcx_query?Ves632DSdyV=NEW_XSD_XJCJ'
@@ -252,17 +257,17 @@ def login(username, password, session_key):
     # session = requests.session()
 
     try:
-        login_response = global_sessions[session_key]['session'].get(login_url, headers=headers)
+        login_response = global_sessions[session_key]['session'].get(login_url, headers=headers, timeout=10)
     except:
         # 
         return None
     if str(login_response.status_code)[0] != "2":
         return "sites_dead"
     login_page_soup = BeautifulSoup(login_response.content.decode('utf-8'))
-    jsessionid = login_page_soup.form['action'].split("jsessionid=")[-1].split("?service")[0]
-    service = login_page_soup.form['action'].split("service=")[-1]
-    new_login_url = host + "/authserver/login?" + "jsessionid=" + jsessionid + "&service=" + service
-
+    #jsessionid = login_page_soup.form['action'].split("jsessionid=")[-1].split("?service")[0]
+    #service = login_page_soup.form['action'].split("service=")[-1]
+    #new_login_url = host + "/authserver/login?" + "jsessionid=" + jsessionid + "&service=" + service
+    new_login_url = host + login_page_soup.form['action']
     
     all_input = login_page_soup.find_all('input')
     # print("all_input")
@@ -279,7 +284,7 @@ def login(username, password, session_key):
     #
     # print(login_postdata)
     try:
-        post_response = global_sessions[session_key]['session'].post(url=new_login_url, data=login_postdata, headers=headers)
+        post_response = global_sessions[session_key]['session'].post(url=new_login_url, data=login_postdata, headers=headers, timeout=10)
     except:
         return None
     # 
@@ -329,7 +334,7 @@ def login_with_captcha(username, password, session_key, captchaResponse):
     # print(login_postdata)
     try:
         post_response = global_sessions[session_key]['session'].post(url=global_sessions[session_key]['new_login_url'],
-                                                                     data=login_postdata, headers=headers)
+                                                                     data=login_postdata, headers=headers, timeout=10)
     except:
         return None
     if str(post_response.status_code)[0] != "2":
