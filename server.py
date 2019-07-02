@@ -10,6 +10,9 @@ import datetime
 app = Flask(__name__)
 app.debug = False
 
+default_announcement = "个人开发小程序，能力有限，多多包涵。遇到卡顿可能是由于教务部网站无法登陆，也有可能是我的服务器性能太渣。若有意向与我一同维护该项目，请联系我。qq:1021777674"
+
+
 global_sessions = {}
 
 host = 'http://202.114.234.143'
@@ -71,7 +74,7 @@ def get_captcha():
     session_key.replace(" ", "+")  # 
     copied_headers = headers.copy()
     copied_headers.update({"content-type": "application/x-jpg"})
-    img_response = global_sessions[session_key]['session'].get(url=to_get_captcha_url, headers=copied_headers)
+    img_response = global_sessions[session_key]['session'].get(url=to_get_captcha_url, headers=copied_headers, timeout=5)
     temp_file_path = './tempImgs/temp_' + session_key + '.jpg'
     with open(temp_file_path, 'wb') as fb:
         fb.write(img_response.content)
@@ -193,7 +196,7 @@ def fetch_list(username, password, session_key, captcha=None):
             try:
                 try_get_list_response = global_sessions[session_key]['session'].post(search_list_url,
                                                                           data=search_list_postdata,
-                                                                          headers=headers, timeout=10)
+                                                                          headers=headers, timeout=5)
             except:
                 break
             if str(try_get_list_response.status_code)[0] != '2':
@@ -257,7 +260,7 @@ def login(username, password, session_key):
     # session = requests.session()
 
     try:
-        login_response = global_sessions[session_key]['session'].get(login_url, headers=headers, timeout=10)
+        login_response = global_sessions[session_key]['session'].get(login_url, headers=headers, timeout=5)
     except:
         # 
         return None
@@ -284,7 +287,7 @@ def login(username, password, session_key):
     #
     # print(login_postdata)
     try:
-        post_response = global_sessions[session_key]['session'].post(url=new_login_url, data=login_postdata, headers=headers, timeout=10)
+        post_response = global_sessions[session_key]['session'].post(url=new_login_url, data=login_postdata, headers=headers, timeout=5)
     except:
         return None
     # 
@@ -334,7 +337,7 @@ def login_with_captcha(username, password, session_key, captchaResponse):
     # print(login_postdata)
     try:
         post_response = global_sessions[session_key]['session'].post(url=global_sessions[session_key]['new_login_url'],
-                                                                     data=login_postdata, headers=headers, timeout=10)
+                                                                     data=login_postdata, headers=headers, timeout=5)
     except:
         return None
     if str(post_response.status_code)[0] != "2":
@@ -356,6 +359,18 @@ def login_with_captcha(username, password, session_key, captchaResponse):
         return "login_fail_no_need_refresh"
     else:
         return "login_success"
+
+
+@app.route('/setAnnouncement', methods=['POST'])
+def set_announcement():
+    global default_announcement
+    default_announcement = request.form['content']
+    return "success"
+
+
+@app.route('/getAnnouncement', methods=['GET'])
+def get_announcement():
+    return default_announcement
 
 
 if __name__ == '__main__':
