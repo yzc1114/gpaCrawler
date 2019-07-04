@@ -1,8 +1,5 @@
-/tempImgs
 supervisor_err.log
 supervisor.log
 server.log
 error.log
 access.log
-config.ini
-requirement.txt
