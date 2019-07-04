@@ -1,0 +1,237 @@
+[uWSGI] getting INI configuration from /home/ubuntu/gpaCrawler/config.ini
+open("./python_plugin.so"): No such file or directory [core/utils.c line 3721]
+!!! UNABLE to load uWSGI plugin: ./python_plugin.so: cannot open shared object file: No such file or directory !!!
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Jul  2 19:48:01 2019] ***
+compiled with version: 5.4.0 20160609 on 23 January 2019 08:57:02
+os: Linux-4.4.0-141-generic #167-Ubuntu SMP Wed Dec 5 10:40:15 UTC 2018
+nodename: VM-0-4-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /usr/local/etc
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/gpaCrawler
+your processes number limit is 7325
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5000 fd 3
+Python version: 2.7.12 (default, Nov 12 2018, 14:36:49)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/ubuntu/gpaCrawler/venv
+Python main interpreter initialized at 0x8da060
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/ubuntu/gpaCrawler/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x8da060 pid: 24275 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24275)
+spawned uWSGI worker 1 (pid: 24277, cores: 1)
+*** Stats server enabled on 127.0.0.1:9191 fd: 10 ***
+[pid: 24277|app: 0|req: 1/1] 183.193.7.86 () {52 vars in 952 bytes} [Tue Jul  2 19:48:29 2019] POST /get_userinfo => generated 85 bytes in 198 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+/home/ubuntu/gpaCrawler/server.py:266: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 266 of the file /home/ubuntu/gpaCrawler/server.py. To get rid of this warning, pass the additional argument 'features="html5lib"' to the BeautifulSoup constructor.
+
+  login_page_soup = BeautifulSoup(login_response.content.decode('utf-8'))
+[pid: 24277|app: 0|req: 2/2] 183.193.7.86 () {52 vars in 946 bytes} [Tue Jul  2 19:48:30 2019] POST /fetchList => generated 15 bytes in 127466 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24277|app: 0|req: 3/3] 113.97.33.13 () {52 vars in 954 bytes} [Tue Jul  2 19:50:38 2019] POST /get_userinfo => generated 85 bytes in 232 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24277|app: 0|req: 4/4] 223.104.96.103 () {52 vars in 946 bytes} [Tue Jul  2 19:50:38 2019] POST /fetchList => generated 15 bytes in 127511 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24277|app: 0|req: 5/5] 111.172.115.167 () {52 vars in 957 bytes} [Tue Jul  2 19:52:45 2019] POST /get_userinfo => generated 85 bytes in 196 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24277|app: 0|req: 6/6] 58.243.254.157 () {52 vars in 953 bytes} [Tue Jul  2 19:52:46 2019] POST /get_userinfo => generated 85 bytes in 225 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24277|app: 0|req: 7/7] 117.136.38.190 () {52 vars in 950 bytes} [Tue Jul  2 19:52:46 2019] POST /get_userinfo => generated 85 bytes in 216 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+goodbye to uWSGI.
+[uWSGI] getting INI configuration from /home/ubuntu/gpaCrawler/config.ini
+open("./python_plugin.so"): No such file or directory [core/utils.c line 3721]
+!!! UNABLE to load uWSGI plugin: ./python_plugin.so: cannot open shared object file: No such file or directory !!!
+*** Starting uWSGI 2.0.17.1 (64bit) on [Tue Jul  2 19:53:50 2019] ***
+compiled with version: 5.4.0 20160609 on 23 January 2019 08:57:02
+os: Linux-4.4.0-141-generic #167-Ubuntu SMP Wed Dec 5 10:40:15 UTC 2018
+nodename: VM-0-4-ubuntu
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /usr/local/etc
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/ubuntu/gpaCrawler
+your processes number limit is 7325
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:5000 fd 3
+Python version: 2.7.12 (default, Nov 12 2018, 14:36:49)  [GCC 5.4.0 20160609]
+Set PythonHome to /home/ubuntu/gpaCrawler/venv
+Python main interpreter initialized at 0x105d060
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145808 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/ubuntu/gpaCrawler/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x105d060 pid: 24788 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 24788)
+spawned uWSGI worker 1 (pid: 24790, cores: 1)
+*** Stats server enabled on 127.0.0.1:9191 fd: 10 ***
+/home/ubuntu/gpaCrawler/server.py:266: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 266 of the file /home/ubuntu/gpaCrawler/server.py. To get rid of this warning, pass the additional argument 'features="html5lib"' to the BeautifulSoup constructor.
+
+  login_page_soup = BeautifulSoup(login_response.content.decode('utf-8'))
+[pid: 24790|app: 0|req: 1/1] 211.69.173.189 () {50 vars in 980 bytes} [Tue Jul  2 19:53:57 2019] POST /fetchList => generated 15 bytes in 10245 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 2/2] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:54:08 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 3/3] 183.193.7.86 () {52 vars in 952 bytes} [Tue Jul  2 19:54:27 2019] POST /get_userinfo => generated 85 bytes in 167 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 4/4] 183.193.7.86 () {52 vars in 946 bytes} [Tue Jul  2 19:54:29 2019] POST /fetchList => generated 15 bytes in 10311 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 5/5] 183.193.7.86 () {52 vars in 946 bytes} [Tue Jul  2 19:54:41 2019] POST /fetchList => generated 15 bytes in 10241 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 6/6] 211.69.161.113 () {50 vars in 986 bytes} [Tue Jul  2 19:56:22 2019] POST /get_userinfo => generated 85 bytes in 243 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 7/7] 211.69.161.113 () {50 vars in 980 bytes} [Tue Jul  2 19:56:23 2019] POST /fetchList => generated 15 bytes in 10246 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 8/8] 211.69.173.189 () {50 vars in 985 bytes} [Tue Jul  2 19:56:35 2019] POST /get_userinfo => generated 85 bytes in 218 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 9/9] 211.69.161.113 () {50 vars in 980 bytes} [Tue Jul  2 19:56:38 2019] POST /fetchList => generated 15 bytes in 10239 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 10/10] 211.69.173.189 () {50 vars in 979 bytes} [Tue Jul  2 19:56:48 2019] POST /fetchList => generated 15 bytes in 10241 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 11/11] 211.69.173.189 () {50 vars in 979 bytes} [Tue Jul  2 19:57:03 2019] POST /fetchList => generated 15 bytes in 10257 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 12/12] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:57:14 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 13/13] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:57:17 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 14/14] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:57:20 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 15/15] 183.42.1.46 () {52 vars in 949 bytes} [Tue Jul  2 19:57:23 2019] POST /get_userinfo => generated 85 bytes in 256 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 16/16] 183.42.1.46 () {52 vars in 943 bytes} [Tue Jul  2 19:57:29 2019] POST /fetchList => generated 15 bytes in 10291 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 17/17] 183.193.7.86 () {52 vars in 952 bytes} [Tue Jul  2 19:57:39 2019] POST /get_userinfo => generated 85 bytes in 197 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 18/18] 183.42.1.46 () {52 vars in 943 bytes} [Tue Jul  2 19:57:43 2019] POST /fetchList => generated 15 bytes in 10260 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 19/19] 183.193.7.86 () {52 vars in 946 bytes} [Tue Jul  2 19:57:53 2019] POST /fetchList => generated 15 bytes in 10263 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 20/20] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:11 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 21/21] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:13 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 22/22] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:14 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 23/23] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:15 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 24/24] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:16 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 25/25] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:17 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 26/26] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:18 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 27/27] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:19 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 28/28] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:20 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 29/29] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:23 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 30/30] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:24 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 31/31] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:24 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 32/32] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:25 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 33/33] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:25 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 34/34] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:25 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 35/35] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:25 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 36/36] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:26 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 37/37] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:26 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 38/38] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:26 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 39/39] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:26 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 40/40] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:26 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 41/41] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:27 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 42/42] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:27 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 43/43] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:27 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 44/44] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:27 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 45/45] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:27 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 46/46] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:27 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 47/47] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:28 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 48/48] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:28 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 49/49] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:28 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 50/50] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:28 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 51/51] 111.187.83.197 () {50 vars in 878 bytes} [Tue Jul  2 19:58:28 2019] GET / => generated 11 bytes in 0 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 52/52] 183.193.7.86 () {52 vars in 952 bytes} [Tue Jul  2 19:59:49 2019] POST /get_userinfo => generated 85 bytes in 199 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 53/53] 183.193.7.86 () {52 vars in 946 bytes} [Tue Jul  2 19:59:51 2019] POST /fetchList => generated 15 bytes in 10259 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 54/54] 183.39.49.100 () {50 vars in 983 bytes} [Tue Jul  2 20:00:01 2019] POST /get_userinfo => generated 85 bytes in 266 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 55/55] 183.39.49.100 () {50 vars in 977 bytes} [Tue Jul  2 20:00:03 2019] POST /fetchList => generated 15 bytes in 10238 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 56/56] 183.39.49.100 () {50 vars in 977 bytes} [Tue Jul  2 20:00:16 2019] POST /fetchList => generated 15 bytes in 10269 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 57/57] 183.7.254.170 () {50 vars in 977 bytes} [Tue Jul  2 20:00:26 2019] POST /fetchList => generated 15 bytes in 10234 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 58/58] 119.103.225.23 () {50 vars in 985 bytes} [Tue Jul  2 20:01:33 2019] POST /get_userinfo => generated 85 bytes in 227 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 59/59] 119.103.225.23 () {50 vars in 979 bytes} [Tue Jul  2 20:01:36 2019] POST /fetchList => generated 15 bytes in 10236 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 60/60] 49.74.49.126 () {50 vars in 978 bytes} [Tue Jul  2 20:01:48 2019] POST /get_userinfo => generated 85 bytes in 209 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 61/61] 49.74.49.126 () {50 vars in 972 bytes} [Tue Jul  2 20:02:01 2019] POST /fetchList => generated 15 bytes in 10240 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 62/62] 171.43.225.170 () {52 vars in 956 bytes} [Tue Jul  2 20:02:12 2019] POST /get_userinfo => generated 85 bytes in 192 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 63/63] 171.43.225.170 () {52 vars in 950 bytes} [Tue Jul  2 20:02:14 2019] POST /fetchList => generated 15 bytes in 10242 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 64/64] 49.74.49.126 () {50 vars in 972 bytes} [Tue Jul  2 20:02:24 2019] POST /fetchList => generated 15 bytes in 10234 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 65/65] 49.74.49.126 () {50 vars in 972 bytes} [Tue Jul  2 20:02:51 2019] POST /fetchList => generated 15 bytes in 10247 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 66/66] 49.74.49.126 () {50 vars in 972 bytes} [Tue Jul  2 20:03:32 2019] POST /fetchList => generated 15 bytes in 10244 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 67/67] 49.74.49.126 () {50 vars in 972 bytes} [Tue Jul  2 20:03:47 2019] POST /fetchList => generated 15 bytes in 10243 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 68/68] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:03:58 2019] POST /get_userinfo => generated 85 bytes in 213 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 69/69] 27.18.238.242 () {52 vars in 955 bytes} [Tue Jul  2 20:03:58 2019] POST /get_userinfo => generated 85 bytes in 221 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 70/70] 27.18.238.242 () {52 vars in 949 bytes} [Tue Jul  2 20:03:59 2019] POST /fetchList => generated 15 bytes in 10231 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 71/71] 27.18.238.242 () {52 vars in 949 bytes} [Tue Jul  2 20:04:13 2019] POST /fetchList => generated 15 bytes in 10240 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 72/72] 58.19.2.82 () {52 vars in 952 bytes} [Tue Jul  2 20:04:39 2019] POST /get_userinfo => generated 85 bytes in 225 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 73/73] 58.19.2.82 () {52 vars in 946 bytes} [Tue Jul  2 20:04:46 2019] POST /fetchList => generated 15 bytes in 10262 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 74/74] 112.28.164.92 () {52 vars in 955 bytes} [Tue Jul  2 20:06:18 2019] POST /get_userinfo => generated 85 bytes in 223 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 75/75] 112.28.164.92 () {52 vars in 949 bytes} [Tue Jul  2 20:06:19 2019] POST /fetchList => generated 15 bytes in 10244 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 76/76] 112.28.164.92 () {52 vars in 949 bytes} [Tue Jul  2 20:06:37 2019] POST /fetchList => generated 15 bytes in 10247 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 77/77] 112.28.164.92 () {52 vars in 949 bytes} [Tue Jul  2 20:07:19 2019] POST /fetchList => generated 15 bytes in 10228 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 78/78] 112.28.164.92 () {52 vars in 949 bytes} [Tue Jul  2 20:07:51 2019] POST /fetchList => generated 15 bytes in 10246 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 79/79] 113.57.247.99 () {52 vars in 949 bytes} [Tue Jul  2 20:08:15 2019] POST /fetchList => generated 15 bytes in 10239 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 80/80] 113.57.247.99 () {52 vars in 949 bytes} [Tue Jul  2 20:08:27 2019] POST /fetchList => generated 15 bytes in 10228 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 81/81] 117.136.19.103 () {52 vars in 954 bytes} [Tue Jul  2 20:08:57 2019] POST /get_userinfo => generated 85 bytes in 192 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 82/82] 117.136.19.103 () {52 vars in 948 bytes} [Tue Jul  2 20:08:58 2019] POST /fetchList => generated 15 bytes in 10263 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 83/83] 117.136.19.103 () {52 vars in 948 bytes} [Tue Jul  2 20:09:11 2019] POST /fetchList => generated 15 bytes in 10243 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 84/84] 117.136.15.10 () {52 vars in 951 bytes} [Tue Jul  2 20:09:21 2019] POST /get_userinfo => generated 85 bytes in 167 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 85/85] 117.136.19.103 () {52 vars in 948 bytes} [Tue Jul  2 20:09:24 2019] POST /fetchList => generated 15 bytes in 10244 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 86/86] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:10:24 2019] POST /get_userinfo => generated 85 bytes in 189 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 87/87] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:10:25 2019] POST /get_userinfo => generated 85 bytes in 215 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 88/88] 223.104.96.103 () {52 vars in 952 bytes} [Tue Jul  2 20:10:29 2019] POST /get_userinfo => generated 85 bytes in 255 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 89/89] 223.104.96.103 () {52 vars in 946 bytes} [Tue Jul  2 20:10:37 2019] POST /fetchList => generated 15 bytes in 10243 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 90/90] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:10:53 2019] POST /get_userinfo => generated 85 bytes in 209 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 91/91] 117.136.116.156 () {50 vars in 975 bytes} [Tue Jul  2 20:11:18 2019] POST /get_userinfo => generated 85 bytes in 215 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 92/92] 171.114.190.87 () {52 vars in 944 bytes} [Tue Jul  2 20:11:34 2019] POST /get_userinfo => generated 85 bytes in 196 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 93/93] 171.114.190.87 () {52 vars in 938 bytes} [Tue Jul  2 20:11:36 2019] POST /fetchList => generated 15 bytes in 10282 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 94/94] 171.114.190.87 () {52 vars in 938 bytes} [Tue Jul  2 20:11:48 2019] POST /fetchList => generated 15 bytes in 10239 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 95/95] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:11:58 2019] POST /get_userinfo => generated 85 bytes in 186 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 96/96] 111.4.146.31 () {50 vars in 986 bytes} [Tue Jul  2 20:12:09 2019] POST /get_userinfo => generated 85 bytes in 210 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 97/97] 111.4.146.31 () {50 vars in 980 bytes} [Tue Jul  2 20:12:10 2019] POST /fetchList => generated 15 bytes in 10233 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 98/98] 183.92.250.71 () {50 vars in 982 bytes} [Tue Jul  2 20:12:20 2019] POST /get_userinfo => generated 85 bytes in 232 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 99/99] 183.92.250.71 () {50 vars in 976 bytes} [Tue Jul  2 20:12:22 2019] POST /fetchList => generated 15 bytes in 10256 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 100/100] 171.82.19.176 () {52 vars in 951 bytes} [Tue Jul  2 20:12:32 2019] POST /get_userinfo => generated 85 bytes in 242 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 101/101] 171.82.19.176 () {52 vars in 945 bytes} [Tue Jul  2 20:12:33 2019] POST /fetchList => generated 15 bytes in 10240 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 102/102] 183.92.250.71 () {50 vars in 976 bytes} [Tue Jul  2 20:12:43 2019] POST /fetchList => generated 15 bytes in 10253 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 103/103] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:13:11 2019] POST /get_userinfo => generated 85 bytes in 180 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 104/104] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:13:12 2019] POST /get_userinfo => generated 85 bytes in 170 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 105/105] 171.82.19.176 () {52 vars in 945 bytes} [Tue Jul  2 20:13:17 2019] POST /fetchList => generated 15 bytes in 10494 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 106/106] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:13:28 2019] POST /get_userinfo => generated 85 bytes in 193 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 107/107] 171.82.19.176 () {52 vars in 945 bytes} [Tue Jul  2 20:13:40 2019] POST /fetchList => generated 15 bytes in 10221 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 108/108] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:13:55 2019] POST /get_userinfo => generated 85 bytes in 193 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 109/109] 117.136.52.192 () {50 vars in 986 bytes} [Tue Jul  2 20:13:59 2019] POST /get_userinfo => generated 85 bytes in 206 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 110/110] 117.136.52.192 () {50 vars in 980 bytes} [Tue Jul  2 20:14:01 2019] POST /fetchList => generated 15 bytes in 10237 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 111/111] 171.42.18.21 () {50 vars in 984 bytes} [Tue Jul  2 20:14:19 2019] POST /get_userinfo => generated 85 bytes in 195 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 112/112] 113.57.224.232 () {50 vars in 979 bytes} [Tue Jul  2 20:14:20 2019] POST /fetchList => generated 15 bytes in 10236 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 113/113] 171.42.18.21 () {50 vars in 978 bytes} [Tue Jul  2 20:14:31 2019] POST /fetchList => generated 15 bytes in 10283 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 114/114] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:14:41 2019] POST /get_userinfo => generated 85 bytes in 191 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 115/115] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:14:41 2019] POST /get_userinfo => generated 85 bytes in 176 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 116/116] 171.82.19.176 () {52 vars in 945 bytes} [Tue Jul  2 20:14:42 2019] POST /fetchList => generated 15 bytes in 10244 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 117/117] 113.57.224.232 () {50 vars in 980 bytes} [Tue Jul  2 20:15:03 2019] POST /fetchList => generated 15 bytes in 10242 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+/home/ubuntu/gpaCrawler/server.py:297: UserWarning: No parser was explicitly specified, so I'm using the best available HTML parser for this system ("html5lib"). This usually isn't a problem, but if you run this code on another system, or in a different virtual environment, it may use a different parser and behave differently.
+
+The code that caused this warning is on line 297 of the file /home/ubuntu/gpaCrawler/server.py. To get rid of this warning, pass the additional argument 'features="html5lib"' to the BeautifulSoup constructor.
+
+  post_response_soup = BeautifulSoup(post_response.content.decode('utf-8'))
+[pid: 24790|app: 0|req: 118/118] 171.42.18.21 () {50 vars in 978 bytes} [Tue Jul  2 20:15:14 2019] POST /fetchList => generated 12 bytes in 140 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 119/119] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:15:22 2019] POST /get_userinfo => generated 85 bytes in 190 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 120/120] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:15:31 2019] POST /get_userinfo => generated 85 bytes in 172 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 121/121] 171.82.19.176 () {52 vars in 945 bytes} [Tue Jul  2 20:15:31 2019] POST /fetchList => generated 15 bytes in 10245 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 122/122] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:15:41 2019] POST /get_userinfo => generated 85 bytes in 179 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 123/123] 171.42.18.21 () {50 vars in 978 bytes} [Tue Jul  2 20:15:41 2019] POST /fetchList => generated 15 bytes in 10235 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 124/124] 113.57.224.232 () {50 vars in 980 bytes} [Tue Jul  2 20:15:52 2019] POST /fetchList => generated 15 bytes in 10226 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 125/125] 171.42.18.21 () {50 vars in 978 bytes} [Tue Jul  2 20:16:02 2019] POST /fetchList => generated 15 bytes in 10235 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 126/126] 183.193.7.86 () {56 vars in 1056 bytes} [Tue Jul  2 20:16:12 2019] POST /get_userinfo => generated 85 bytes in 191 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 127/127] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:16:12 2019] POST /get_userinfo => generated 85 bytes in 176 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 128/128] 171.42.18.21 () {50 vars in 978 bytes} [Tue Jul  2 20:16:14 2019] POST /fetchList => generated 15 bytes in 10246 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 129/129] 113.57.224.232 () {50 vars in 980 bytes} [Tue Jul  2 20:16:26 2019] POST /fetchList => generated 15 bytes in 10263 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 130/130] 223.104.96.103 () {52 vars in 946 bytes} [Tue Jul  2 20:16:46 2019] POST /fetchList => generated 15 bytes in 10237 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 131/131] 117.136.103.214 () {50 vars in 985 bytes} [Tue Jul  2 20:16:56 2019] POST /get_userinfo => generated 85 bytes in 209 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 132/132] 117.136.103.214 () {50 vars in 979 bytes} [Tue Jul  2 20:16:57 2019] POST /fetchList => generated 15 bytes in 11237 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 133/133] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:17:09 2019] POST /get_userinfo => generated 85 bytes in 202 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 134/134] 223.104.96.103 () {52 vars in 946 bytes} [Tue Jul  2 20:17:09 2019] POST /fetchList => generated 15 bytes in 10242 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 135/135] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:17:19 2019] POST /get_userinfo => generated 85 bytes in 156 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 136/136] 117.136.103.214 () {50 vars in 979 bytes} [Tue Jul  2 20:17:19 2019] POST /fetchList => generated 15 bytes in 10241 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 137/137] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:17:29 2019] POST /get_userinfo => generated 85 bytes in 187 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 138/138] 117.136.103.214 () {50 vars in 985 bytes} [Tue Jul  2 20:17:35 2019] POST /get_userinfo => generated 85 bytes in 234 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 139/139] 117.136.103.214 () {50 vars in 979 bytes} [Tue Jul  2 20:17:37 2019] POST /fetchList => generated 15 bytes in 10235 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 140/140] 171.82.19.176 () {52 vars in 945 bytes} [Tue Jul  2 20:18:21 2019] POST /fetchList => generated 15 bytes in 10276 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 141/141] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:18:34 2019] POST /get_userinfo => generated 85 bytes in 167 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 142/142] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:18:35 2019] POST /get_userinfo => generated 85 bytes in 203 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 143/143] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:18:53 2019] POST /get_userinfo => generated 85 bytes in 181 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)
+[pid: 24790|app: 0|req: 144/144] 183.193.7.86 () {56 vars in 1042 bytes} [Tue Jul  2 20:18:54 2019] POST /get_userinfo => generated 85 bytes in 195 msecs (HTTP/1.1 200) 2 headers in 79 bytes (1 switches on core 0)

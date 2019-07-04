@@ -1,3 +1,5 @@
+#!/user/bin/python2.7
+# -*- coding: utf-8 -*-
 import random
 from flask import Flask
 from flask import request
