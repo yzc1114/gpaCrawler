@@ -130,7 +130,7 @@ def fetch_list(username, password, session_key, captcha=None):
     to_get_captcha_url = 'http://202.114.234.143/authserver/captcha.html'
     # get_ur
     get_url = 'http://202.114.234.160/jsxsd/kscj/cjcx_query?Ves632DSdyV=NEW_XSD_XJCJ'
-    search_list_url = 'http://202.114.234.160/jsxsd/kscj/cjcx_list'
+    search_list_url = 'http://202.114.234.163/jsxsd/kscj/cjcx_list'
     login_postdata = {'username': username,
                       'password': password,
                       'lt': '',
@@ -241,7 +241,7 @@ def fetch_list(username, password, session_key, captcha=None):
 def login(username, password, session_key):
     global global_sessions
     host = 'http://202.114.234.143'
-    login_url = 'http://202.114.234.143/authserver/login?service=http%3A%2F%2F202.114.234.160%2Fjsxsd%2Fkscj%2Fcjcx_query%3FVes632DSdyV%3DNEW_XSD_XJCJ'
+    login_url = 'http://202.114.234.163/jsxsd/kscj/cjcx_query?Ves632DSdyV=NEW_XSD_XJCJ'
     #login_url = 'http://202.114.234.143/authserver/login'
     to_get_captcha_url = 'http://202.114.234.143/authserver/captcha.html'
     #
@@ -269,11 +269,21 @@ def login(username, password, session_key):
     if str(login_response.status_code)[0] != "2":
         return "sites_dead"
     login_page_soup = BeautifulSoup(login_response.content.decode('utf-8'))
-    #jsessionid = login_page_soup.form['action'].split("jsessionid=")[-1].split("?service")[0]
-    #service = login_page_soup.form['action'].split("service=")[-1]
-    #new_login_url = host + "/authserver/login?" + "jsessionid=" + jsessionid + "&service=" + service
+
+    href = login_page_soup.find_all('script')[0].contents[0]
+    href = href.split("href='")[-1][:-2]
+    new_login_url = href
+
+
+    try:
+        login_response = global_sessions[session_key]['session'].get(new_login_url, headers=headers, timeout=5)
+    except:
+        return None
+    login_page_soup = BeautifulSoup(login_response.content.decode('utf-8'))
+
     new_login_url = host + login_page_soup.form['action']
-    
+
+    print(new_login_url)
     all_input = login_page_soup.find_all('input')
     # print("all_input")
     # print(all_input)
