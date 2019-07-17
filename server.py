@@ -3,6 +3,7 @@
 from flask import Flask
 from flask import request
 import requests
+import random
 import json
 from fetch_list import *
 import global_sessions as g
@@ -60,7 +61,7 @@ def get_captcha():
     if session_key not in g.global_sessions.keys():
         return "no session key found"
     img_response = g.global_sessions[session_key]['session'].get(url=to_get_captcha_url, headers=copied_headers, timeout=5)
-    temp_file_path = './static/tempImgs/temp_' + session_key + '.jpg'
+    temp_file_path = './static/tempImgs/temp_' + session_key + str(random.randint(1, 9999999)) + '.jpg'
     with open(temp_file_path, 'wb') as fb:
         fb.write(img_response.content)
     return temp_file_path[2:]
