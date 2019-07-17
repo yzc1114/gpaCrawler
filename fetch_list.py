@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from login import *
 import global_sessions as g
+import requests
 
 
 def fetch_list(username, password, session_key, captcha=None):
