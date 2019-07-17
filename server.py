@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 from flask import Flask
 from flask import request
+import requests
 import json
 from fetch_list import *
 import global_sessions as g
